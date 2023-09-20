@@ -17,9 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from Roadlines.views import homepage
+from Roadlines.views import homepage,listpage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',homepage)
+    path('vehicle_list',listpage)
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
